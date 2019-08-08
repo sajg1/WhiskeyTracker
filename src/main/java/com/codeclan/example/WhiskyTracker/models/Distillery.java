@@ -21,7 +21,7 @@ public class Distillery {
     @Column(name = "region")
     private String region;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("distillery")
     @OneToMany(mappedBy = "distillery", fetch = FetchType.LAZY)
     private List<Whisky> whiskies;
 
